@@ -1,4 +1,10 @@
 class ArticlesController < ApplicationController
+
+	http_basic_authenticate_with name: "nithin1", password: "nithin1",
+       expect: [:index, :show]
+
+
+
   def index
     @articles = Article.all 
   end  	
@@ -48,3 +54,4 @@ class ArticlesController < ApplicationController
   	
 
 end
+
